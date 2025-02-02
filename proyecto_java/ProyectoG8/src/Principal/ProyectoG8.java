@@ -5,13 +5,23 @@
 package Principal;
 
 import java.util.Scanner;
+import MostrarMenu.Menu;
+import RegistrarFutbol.Futbol;
+import RegistrarAtletismo.Atletismo;
+import RegistrarNatacion.Natacion;
+import RegistrarBasquetbol.Basquetbol;
+import RegistrarYoga.Yoga;
+import RegistrarTenis.Tenis;
+import RegistrarCiclismo.Ciclismo;
+import ObtenerInformacion.Informacion;
+import ObtenerReporte.Reporte;
 
 /**
  *
  * @author utpl
  */
 public class ProyectoG8 {
-
+    
     static int[] participantesPorActividad = new int[7];
     static String[] actividades = {"Fútbol", "Natación", "Atletismo", "Básquetbol", "Ciclismo", "Tenis", "Yoga"};
 
@@ -21,38 +31,46 @@ public class ProyectoG8 {
         int totalActividades = 0;
 
         while (continuar) {
-            mostrarMenu();
+            
+            Menu.mostrarMenu();
             int opcion = entrada.nextInt();
-            entrada.nextLine();  // Limpiar buffer
+            entrada.nextLine();
 
             if (opcion == 1) {
-                registrarParticipanteFutbol();
+                Futbol.registrarParticipanteFutbol();
                 participantesPorActividad[0]++;
                 totalActividades++;
+                
             } else if (opcion == 2) {
-                registrarParticipanteNatacion();
+                Natacion.registrarParticipanteNatacion();
                 participantesPorActividad[1]++;
                 totalActividades++;
+                
             } else if (opcion == 3) {
-                registrarParticipanteAtletismo();
+                Atletismo.registrarParticipanteAtletismo();
                 participantesPorActividad[2]++;
                 totalActividades++;
+                
             } else if (opcion == 4) {
-                registrarParticipanteBasquetbol();
+                Basquetbol.registrarParticipanteBasquetbol();
                 participantesPorActividad[3]++;
                 totalActividades++;
+                
             } else if (opcion == 5) {
-                registrarParticipanteCiclismo();
+                Ciclismo.registrarParticipanteCiclismo();
                 participantesPorActividad[4]++;
                 totalActividades++;
+                
             } else if (opcion == 6) {
-                registrarParticipanteTenis();
+                Tenis.registrarParticipanteTenis();
                 participantesPorActividad[5]++;
                 totalActividades++;
+                
             } else if (opcion == 7) {
-                registrarParticipanteYoga();
+                Yoga.registrarParticipanteYoga();
                 participantesPorActividad[6]++;
                 totalActividades++;
+                
             } else {
                 System.out.println("Lo sentimos, el club no tiene esa opción.");
             }
@@ -64,9 +82,11 @@ public class ProyectoG8 {
             }
         }
 
-        obtenerInformacion(totalActividades);
-        obtenerReporte(actividades, participantesPorActividad);
+        Informacion.obtenerInformacion(totalActividades);
+        Reporte.obtenerReporte(actividades, participantesPorActividad);
     }
+
+   
 
    
 

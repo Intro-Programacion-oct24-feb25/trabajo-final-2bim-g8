@@ -8,7 +8,7 @@ package MostrarMenu;
  *
  * @author utpl
  */
-public class MostrarMenu {
+public class Menu {
 
     public static void mostrarMenu() {
         System.out.printf("""
@@ -20,6 +20,6 @@ public class MostrarMenu {
                           5. Ciclismo
                           6. Tenis
                           7. Yoga
-                          Ingrese una opciion: """);
+                          Ingrese una opcion: """);
     }
 }
