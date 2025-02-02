@@ -21,9 +21,11 @@ import ObtenerReporte.Reporte;
  * @author utpl
  */
 public class ProyectoG8 {
-    
+
     static int[] participantesPorActividad = new int[7];
-    static String[] actividades = {"Fútbol", "Natación", "Atletismo", "Básquetbol", "Ciclismo", "Tenis", "Yoga"};
+    static String[] actividades = {"Fútbol", "Natación", "Atletismo",
+        "Básquetbol", "Ciclismo",
+        "Tenis", "Yoga"};
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
@@ -31,7 +33,7 @@ public class ProyectoG8 {
         int totalActividades = 0;
 
         while (continuar) {
-            
+
             Menu.mostrarMenu();
             int opcion = entrada.nextInt();
             entrada.nextLine();
@@ -40,44 +42,44 @@ public class ProyectoG8 {
                 Futbol.registrarParticipanteFutbol();
                 participantesPorActividad[0]++;
                 totalActividades++;
-                
+
             } else if (opcion == 2) {
                 Natacion.registrarParticipanteNatacion();
                 participantesPorActividad[1]++;
                 totalActividades++;
-                
+
             } else if (opcion == 3) {
                 Atletismo.registrarParticipanteAtletismo();
                 participantesPorActividad[2]++;
                 totalActividades++;
-                
+
             } else if (opcion == 4) {
                 Basquetbol.registrarParticipanteBasquetbol();
                 participantesPorActividad[3]++;
                 totalActividades++;
-                
+
             } else if (opcion == 5) {
                 Ciclismo.registrarParticipanteCiclismo();
                 participantesPorActividad[4]++;
                 totalActividades++;
-                
+
             } else if (opcion == 6) {
                 Tenis.registrarParticipanteTenis();
                 participantesPorActividad[5]++;
                 totalActividades++;
-                
+
             } else if (opcion == 7) {
                 Yoga.registrarParticipanteYoga();
                 participantesPorActividad[6]++;
                 totalActividades++;
-                
+
             } else {
                 System.out.println("Lo sentimos, el club no tiene esa opción.");
             }
 
-            System.out.print("¿Desea continuar (sí/no)? ");
+            System.out.print("¿Desea continuar (si/no)? ");
             String respuesta = entrada.nextLine();
-            if (respuesta.equalsIgnoreCase("no")) {
+            if (respuesta.equals("si")) {
                 continuar = false;
             }
         }
@@ -86,11 +88,4 @@ public class ProyectoG8 {
         Reporte.obtenerReporte(actividades, participantesPorActividad);
     }
 
-   
-
-   
-
-   
 }
-
-

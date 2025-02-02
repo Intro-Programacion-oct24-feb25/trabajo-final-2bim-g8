@@ -12,14 +12,25 @@ public class Menu {
 
     public static void mostrarMenu() {
         System.out.printf("""
-                          Seleccione la actividad para registrar un participante:
-                          1. Futbol
-                          2. Natacion
-                          3. Atletismo
-                          4. Basquetbol
-                          5. Ciclismo
-                          6. Tenis
-                          7. Yoga
-                          Ingrese una opcion: """);
+                         -----------------------------------------------------------
+                         |     -----------------------------------------------      |  
+                         |     |                                              |     |
+                         |     |   Club deportivo "El deporte para la vida"   |     |
+                         |     |                                              |     |
+                         |     -----------------------------------------------      |
+                         |                                                          |
+                         | Seleccione la actividad para registrar un participante:  |
+                         |                                                          |
+                         |  1. Futbol                                               |
+                         |  2. Natacion                                             |
+                         |  3. Atletismo                                            |
+                         |  4. Basquetbol                                           |
+                         |  5. Ciclismo                                             |
+                         |  6. Tenis                                                |
+                         |  7. Yoga                                                 |
+                         |                                                          |          
+                         -----------------------------------------------------------
+                          
+                          Ingrese una opcion:  \n""");                               
     }
 }
